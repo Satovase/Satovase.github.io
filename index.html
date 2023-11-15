@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <title>Your Name - Researcher</title>
+    <title>Satovase - Researcher</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -86,8 +86,21 @@
 
     <header>
         <div class="container">
-            <img src="neko.jpg" alt="Your Name" class="profile-img">
-            <h1>Satomi Nekochan Ono</h1>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="your-photo-1.jpg" alt="Your Name"></div>
+                    <div class="swiper-slide"><img src="your-photo-2.jpg" alt="Your Name"></div>
+                    <div class="swiper-slide"><img src="your-photo-3.jpg" alt="Your Name"></div>
+                    <div class="swiper-slide"><img src="your-photo-4.jpg" alt="Your Name"></div>
+                    <div class="swiper-slide"><img src="your-photo-5.jpg" alt="Your Name"></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <h1>Your Name</h1>
             <p class="subtitle">Researcher in [Your Research Field]</p>
         </div>
     </header>
@@ -125,9 +138,25 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Satovase. All Rights Reserved.</p>
+            <p>&copy; 2023 Your Name. All Rights Reserved.</p>
         </div>
     </footer>
-    
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+
 </body>
 </html>
