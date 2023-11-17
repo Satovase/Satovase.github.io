@@ -12,16 +12,43 @@
             padding: 0;
             background: linear-gradient(to right, #3498db, #2c3e50);
             color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         header {
-            text-align: center;
-            padding: 40px 0;
+            text-align: left;
+        }
+
+        .profile-info {
+            text-align: left;
+        }
+
+        .profile-img {
+            border-radius: 50%;
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .swiper-container {
+            max-width: 400px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            border-radius: 8px;
         }
 
         h1, h2 {
@@ -33,7 +60,10 @@
         }
 
         section {
+            max-width: 400px;
+            width: 100%;
             margin-bottom: 40px;
+            box-sizing: border-box;
         }
 
         h2 {
@@ -63,22 +93,12 @@
             color: #ecf0f1;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
-            bottom: 0;
             width: 100%;
+            box-sizing: border-box;
         }
 
         .contact-extra-space {
             height: 3em; /* 3 lines of extra space */
-        }
-
-        .swiper-container {
-            margin-bottom: 20px;
-        }
-
-        .swiper-slide img {
-            width: 100%;
-            border-radius: 8px;
         }
     </style>
 </head>
@@ -86,8 +106,11 @@
 
     <header>
         <div class="container">
-            <h1>Your Name</h1>
-            <p class="subtitle">Researcher in [Your Research Field]</p>
+            <div class="profile-info">
+                <h1>Your Name</h1>
+                <p class="subtitle">Researcher in [Your Research Field]</p>
+            </div>
+            <img src="your-photo.jpg" alt="Your Name" class="profile-img">
         </div>
     </header>
 
@@ -122,12 +145,6 @@
 
     </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Your Name. All Rights Reserved.</p>
-        </div>
-    </footer>
-
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="your-photo-1.jpg" alt="Your Name"></div>
@@ -142,6 +159,10 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
     </div>
+
+    <footer>
+        <p>&copy; 2023 Your Name. All Rights Reserved.</p>
+    </footer>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
